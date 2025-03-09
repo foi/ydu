@@ -158,7 +158,7 @@ func main() {
 	if *filePath == "" ||
 		*yandexDiskUploadPath == "" ||
 		token == "" {
-		slog.Error(
+		logger.Error(
 			"please set --path-to-file, --target-yandex-disk-path, and pass ENV variable with yandex disk token YANDEX_DISK_TOKEN",
 		)
 		os.Exit(1)
@@ -220,7 +220,7 @@ func main() {
 		*filePath,
 	)
 	if err != nil {
-		slog.Error(
+		logger.Error(
 			"Erroro during upload file",
 			slog.String("message", err.Error()),
 		)

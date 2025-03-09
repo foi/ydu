@@ -23,3 +23,6 @@ go.work.sum
 
 # env file
 .env
+
+ydu_arm64
+ydu_amd64
